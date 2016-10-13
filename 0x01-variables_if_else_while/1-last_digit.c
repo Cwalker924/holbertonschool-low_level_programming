@@ -2,10 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * betty style doc for function main goes there
  * main - for entry point
- * prints the evaluated n and j
- * Return: 0 to close main
+ * Return: 0
  */
 int main(void)
 {
@@ -29,6 +27,5 @@ int main(void)
 	{
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, j);
 	}
-
 	return (0);
 }
