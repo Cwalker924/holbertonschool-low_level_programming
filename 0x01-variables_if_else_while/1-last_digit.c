@@ -1,12 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there
- * C program that evaluates the last digit of
- * a random number
- */
-
+#include <stdio.h>
 /**
- *betty style doc for function main goes there
+ * betty style doc for function main goes there
  * main - for entry point
  * prints the evaluated n and j
  * Return: 0 to close main
