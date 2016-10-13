@@ -7,7 +7,7 @@
 /**
  * main - for entry point
  * prints using a string using puts
- * Return: 0 to close main 
+ * Return: 0 to close main
  *
  */
 int main(void)
