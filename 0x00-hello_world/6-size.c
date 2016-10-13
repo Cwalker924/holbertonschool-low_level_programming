@@ -1,27 +1,21 @@
 #include <stdio.h>
-/**
+/*
  * C Program for byte size
  */
 
 /**
  * main - for program entry point
- * prints a byte menue
- * Return: 0 for program exit
+ * returns a byte menue if executed correctly
+ * Return: 0
  *
  */
 int main(void)
 {
-	char c;
-	int i;
-	long int li;
-	long long int lli;
-	float f;
-
-	printf("Size of a char: %ul byte(s)", (unsigned long)sizeof(c));
-	printf("Size of an int: %ul byte(s)", (unsigned long)sizeof(i));
-	printf("Size of a long int: %ul byte(s)", (unsigned long)sizeof(li));
-	printf("Size of a long long int: %ul byte(s)", (unsigned long)sizeof(lli));
-	printf("Size of a float: %ul byte(s)\n", (unsigned long)sizeof(f));
+	printf("Size of a char: %i byte(s)\n", sizeof(char));
+	printf("Size of an int: %i byte(s)\n", sizeof(int));
+	printf("Size of a long int: %i byte(s)\n", sizeof(long));
+	printf("Size of a long long int: %i byte(s)\n", sizeof(long long));
+	printf("Size of a float: %i byte(s)\n", sizeof(float));
 
 	return (0);
 }
