@@ -17,7 +17,7 @@ int main(void)
 				putchar(num);
 				if (n == '8' && num == '9')
 				{
-					putchar('\n');
+					break;
 				}
 				else
 				{
