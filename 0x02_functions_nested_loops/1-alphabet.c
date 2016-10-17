@@ -1,7 +1,8 @@
 #include "holberton.h"
+
 /**
- * main - prints 'a'-'z'
- * Return: Always 0.
+ * print_alphabet - prints a-z
+ * Return: 0
  */
 void print_alphabet(void)
 {
