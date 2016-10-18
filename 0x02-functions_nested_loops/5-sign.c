@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- *
- *
+ * print_sign - prints a correlating sign
+ * @n: check case
+ * Return: 1, 0, or -1
  */
 int print_sign(int n)
 {
