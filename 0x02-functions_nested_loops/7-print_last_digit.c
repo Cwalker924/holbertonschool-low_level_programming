@@ -2,7 +2,8 @@
 
 /**
  * print_last_digit - prints the last digit
- *
+ * @c: check case
+ * Return: num
  */
 int print_last_digit(int c)
 {
@@ -12,7 +13,7 @@ int print_last_digit(int c)
 	{
 		c *= -1;
 	}
-       	num = (c % 10);
-       	_putchar(num + '0');
+	num = (c % 10);
+	_putchar(num + '0');
 	return (num);
 }
