@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * print_sign - checks if input is a letter 
- *
+ * _isalpha - checks if input is a letter
+ * @c: check case
+ * Return: 1 or 0
  */
 int _isalpha(int c)
 {
