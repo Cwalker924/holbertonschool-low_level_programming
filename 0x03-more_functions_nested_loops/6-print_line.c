@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_line - prints '_' depending on input number
- * @num: counter
+ * @n: variable arguement
  */
 void print_line(int n)
 {
