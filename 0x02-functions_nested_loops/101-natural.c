@@ -1,12 +1,13 @@
 #include "holberton.h"
-#inlcude <stdio.h>
+#inlcude < stdio.h >
 
 /**
- *
+ * main - prints sum of all multiples of 3 and 5
+ * Return: 0
  */
-void multiples(void)
+int main(void)
 {
-	int a;
+	int a, sum;
 
 	a = 0;
 	sum = 0;
@@ -22,6 +23,6 @@ void multiples(void)
 		}
 		a++;
 	}
-	printf(sum);
-	_putchar('\n');
+	printf("%d\n", sum);
+	return (0);
 }
