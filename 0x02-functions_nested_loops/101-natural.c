@@ -1,5 +1,4 @@
-#include "holberton.h"
-#inlcude < stdio.h >
+#include < stdio.h >
 
 /**
  * main - prints sum of all multiples of 3 and 5
