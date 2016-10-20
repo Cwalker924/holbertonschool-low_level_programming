@@ -14,11 +14,11 @@ int main(void)
 	second = 2;
 	fib = 3;
 	printf("1 , 2, ");
-	while (count <= 47)
+	while (count < 47)
 	{
 		printf("%d, ", fib);
-		first = 1;
-		second = 2;
+		first = second;
+		second = fib;
 		fib = first + second;
 		count++;
 	}
