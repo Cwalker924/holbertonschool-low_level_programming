@@ -12,7 +12,7 @@ int main(void)
 	first = 1;
 	second = 2;
 	fib = 3;
-	printf("1 , 2, ");
+	printf("1, 2, ");
 	while (count < 47)
 	{
 		printf("%ld, ", fib);
