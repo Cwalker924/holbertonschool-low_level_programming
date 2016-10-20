@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_times_tables - prints multiplication grid
+ * print_times_table - prints multiplication grid
  * @n: arguemtn for times tables
  * Return: n/a
  */
@@ -25,7 +25,7 @@ void print_times_table(int n)
 }
 
 /**
- * spaced - formats the spaces
+ * spaces - formats the spaces
  * @n: argument to format
  * Return: n/a
  */
