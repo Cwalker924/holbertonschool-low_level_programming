@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int count, first, second, fib;
+	long count, first, second, fib;
 
 	count = 0;
 	first = 1;
@@ -16,11 +16,11 @@ int main(void)
 	printf("1 , 2, ");
 	while (count < 47)
 	{
-		printf("%d, ", fib);
+		printf("%ld, ", fib);
 		first = second;
 		second = fib;
 		fib = first + second;
 		count++;
 	}
-	printf("%d\n", fib);
+	printf("%ld\n", fib);
 }
