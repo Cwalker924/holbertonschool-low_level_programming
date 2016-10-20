@@ -2,19 +2,25 @@
 #include <stdio.h>
 
 /**
- *
- *
+ * main - prints out the first 50 fibonacci nums
+ * Return: 0
  */
-void fibonacci(void)
+int main(void)
 {
-	int first, second, fib;
+	int count, first, second, fib;
 
+	count = 0;
 	first = 1;
 	second = 2;
-	fib = first + second;
-	while (count <= 50)
+	fib = 3;
+	printf("1 , 2, ");
+	while (count <= 47)
 	{
-		
+		printf("%d, ", fib);
+		first = 1;
+		second = 2;
+		fib = first + second;
 		count++;
 	}
+	printf("%d\n", fib);
 }
