@@ -7,17 +7,16 @@
  */
 int main(void)
 {
-	int a, sum;
+	int a = 0;
+	int sum = 0;
 
-	a = 0;
-	sum = 0;
-	while (a <= 1024)
+	while (a < 1024)
 	{
-		if (3 % a == 0)
+		if (a % 3 == 0)
 		{
 			sum += a;
 		}
-		if (5 % a == 0)
+		else if (a % 5 == 0)
 		{
 			sum += a;
 		}
