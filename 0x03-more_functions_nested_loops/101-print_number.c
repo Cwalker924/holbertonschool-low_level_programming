@@ -20,7 +20,8 @@ int power(int a, int b)
 
 void print_number(int n)
 {
-	int size, ph, digit;
+	int size, digit;
+	long ph;
 
 	size = 0;
 
