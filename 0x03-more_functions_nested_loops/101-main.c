@@ -23,7 +23,7 @@ int main(void)
 	_putchar('\n');
 	print_number(-120);
 	_putchar('\n');
-	print_number(122345930);
+	print_number(–2147483648);
 	_putchar('\n');
 	print_number(0);
 	_putchar('\n');

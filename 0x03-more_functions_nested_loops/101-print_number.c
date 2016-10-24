@@ -24,14 +24,13 @@ void print_number(int n)
 	long ph;
 
 	size = 0;
-
+	ph = n;
 	if (n < 0)
 	{
-		n *= -1;
+		ph = -1 * ph;
 		_putchar('-');
 	}
 
-	ph = n;
 	while (ph/10 != 0)
 	{
 		ph = ph / 10;
