@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * print_rev - prints a reverse string
  * @s: single character pointer variable
