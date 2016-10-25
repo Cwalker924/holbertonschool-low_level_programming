@@ -3,7 +3,8 @@
 
 /**
  * _strlen - returns the length of a pointer
- * @*s: variable pointer
+ * @s: variable pointer
+ * Return: total number of index
  */
 int _strlen(char *s)
 {
