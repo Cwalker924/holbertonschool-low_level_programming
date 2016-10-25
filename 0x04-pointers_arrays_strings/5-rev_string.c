@@ -2,7 +2,7 @@
 
 /**
  * str_len - gets the length of a string
- * @*s: pointer variable
+ * @s: pointer variable
  */
 int str_len(char *s)
 {
@@ -18,9 +18,20 @@ int str_len(char *s)
 
 /**
  * rev_string - reverses a string
- * @*s: pointer variable
+ * @s: pointer variable
  */
 void rev_string(char *s)
 {
+	int length, x;
+	char first, last;
 
+	length = str_len(s) - 1;
+	x = 0;
+	while (x < length)
+	{
+		first = s[x];
+		last = s[length];
+		s[x++] = last;
+		s[length--] = first;
+	}
 }
