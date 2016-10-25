@@ -1,0 +1,46 @@
+#include "holberton.h"
+
+/**
+ * str_len - gets the length of a string
+ * @s: pointer variable
+ */
+int str_len(char *s)
+{
+	int x;
+
+	x = 0;
+	while (s[x] != '\0')
+	{
+		x++;
+	}
+	return (x);
+}{
+	int x;
+
+	x = 0;
+	while (s[x] != '\0')
+	{
+		x++;
+	}
+	return (x);
+}
+
+/**
+ * rev_string - reverses a string
+ * @s: pointer variable
+ */
+void rev_string(char *s)
+{
+	int length, x;
+	char first, last;
+
+	length = str_len(s) - 1;
+	x = 0;
+	while (x < length)
+	{
+		first = s[x];
+		last = s[length];
+		s[x++] = last;
+		s[length--] = first;
+	}
+}
