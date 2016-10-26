@@ -4,7 +4,7 @@
  * _strcpy - redirects memory
  * @dest: destination
  * @src: source
- * Retrun: new destination
+ * Return: new destination
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -19,5 +19,5 @@ char *_strcpy(char *dest, char *src)
 	}
 	dest[i] = src[i];
 	get = dest;
-	return(get);
+	return (get);
 }
