@@ -13,6 +13,7 @@ int str_len(char *s)
 	{
 		x++;
 	}
+	x--;
 	return (x);
 }
 
@@ -25,7 +26,7 @@ void rev_string(char *s)
 	int length, x;
 	char first, last;
 
-	length = str_len(s) - 1;
+	length = str_len(s);
 	x = 0;
 	while (x < length)
 	{
