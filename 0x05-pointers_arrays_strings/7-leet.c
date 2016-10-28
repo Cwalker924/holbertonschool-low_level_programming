@@ -2,6 +2,7 @@
 /**
  * leet - translates specific characters
  * @p: pointer variable
+ * Return: the tranlated character
  */
 char *leet(char *p)
 {
