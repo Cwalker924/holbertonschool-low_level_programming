@@ -1,6 +1,22 @@
 #include "holberton.h"
 
-int spaces(char c);
+/**
+ * spaces - accounts for all delimiters of spaces
+ * @c: input variable
+ * Return: 1 if contains delimiters && 0 if it does NOT
+ */
+int spaces(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n' || c == ',' ||
+	    c == ';' || c == ';' || c == '.' || c == '!' ||
+	    c == '?' || c == '"' || c == '(' || c == ')' ||
+	    c == '{' || c == '}')
+	{
+		return (1);
+	}
+	return (0);
+}
+
 /**
  * cap_string - capitalized each word in a string
  * @p: string variable pointer
@@ -28,21 +44,4 @@ char *cap_string(char *p)
 		}
 	}
 	return (p);
-}
-
-/**
- * spaces - accounts for all delimiters of spaces
- * @c: input variable
- * Return: 1 if contains delimiters && 0 if it does NOT
- */
-int spaces(char c)
-{
-	if (c == ' ' || c == '\t' || c == '\n' || c == ',' ||
-	    c == ';' || c == ';' || c == '.' || c == '!' ||
-	    c == '?' || c == '"' || c == '(' || c == ')' ||
-	    c == '{' || c == '}')
-	{
-		return (1);
-	}
-	return (0);
 }
