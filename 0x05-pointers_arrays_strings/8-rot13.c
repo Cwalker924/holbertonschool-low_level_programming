@@ -11,8 +11,8 @@ char *rot13(char *p)
 
 	while (p[i] != '\0')
 	{
-		while ((p[i] >= 'a' && p[i] <= 'm') ||
-		       (p[i] >= 'A' && p[i] <= 'M'))
+		while ((p[i] >= 'a' && p[i] <= 'z') ||
+		       (p[i] >= 'A' && p[i] <= 'Z'))
 		{
 			if ((p[i] >= 'n' && p[i] <= 'z') ||
 			    (p[i] >= 'N' && p[i] <= 'Z'))
