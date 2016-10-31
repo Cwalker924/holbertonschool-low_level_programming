@@ -1,0 +1,8 @@
+#!/bin/bash
+set -o noclobber;
+grep -i "File:" Files | cut -b 5- | tr ":" "\*" >> README.md;
+touch $(grep -i "File:" Files | cut -d":" -f 2 | tr -s "\n" " " | cut -b 2-);
+chmod u+x *;
+ls -alt;
+echo "Created blank files and README.md containing \"* 0-FILENAME\"";
+set +o noclobber
