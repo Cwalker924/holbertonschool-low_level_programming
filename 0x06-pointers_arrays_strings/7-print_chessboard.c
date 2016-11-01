@@ -1,6 +1,7 @@
 #include "holberton.h"
+
 /**
- * print_chessboard - function that prints the chessboard
+ * print_chessboard - function that prints a chessboard
  * @a: variable pointer for an array
  */
 void print_chessboard(char (*a)[8])
