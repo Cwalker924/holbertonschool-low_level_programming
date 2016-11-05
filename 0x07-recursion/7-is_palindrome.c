@@ -19,7 +19,7 @@ int str_len(char *s)
  * @s: pointer variable to a (s)tring
  * @l: end of (s)tring
  * @i: index position in (s)tring
- * Return: 0 if characters a re matchingm and 1 if they are not
+ * Return: 0 if characters match and 1 if they are not
  */
 int match(char *s, int l, int i)
 {
