@@ -8,7 +8,14 @@
  */
 int main(int argc, char *argv[])
 {
+	int i;
+
 	argv--;
-	printf("%d\n", argc);
+	i = 0;
+	while(i < argc)
+	{
+		i++;
+	}
+	printf("%d\n", i-1);
 	return (0);
 }
