@@ -10,18 +10,17 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	long sum;
+	int sum = 0;
 
-	for (i = 1, sum = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] == 0 || atoi(argv[i]) <= 0)
+		if (atoi(argv[i]) <= 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
 		sum += atoi(argv[i]);
 	}
-
-	printf("%ld\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
