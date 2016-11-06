@@ -1,0 +1,12 @@
+#include "holberton.h"
+
+void _puts_recursion(char *s)
+{
+	if (*s == '\0')
+		putchar('\n');
+	else
+	{
+		putchar(*s);
+		return _puts_recursion(s + 1);
+	}
+}
