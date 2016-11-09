@@ -6,7 +6,7 @@
  * create_array - creates a block of memory using
  *  malloc and fills it with a character
  *
- *@size: array size
+ * @size: array size
  * @c: character to put in array
  * Return: array otherise NULL
  */
