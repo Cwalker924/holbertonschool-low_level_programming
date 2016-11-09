@@ -1,0 +1,29 @@
+#include "holberton.h"
+
+/**
+ * create_array -
+ * @size:
+ * @c:
+ * Return: array otherise NULL
+ */
+
+char *create_array(unsigned int size, char c)
+{
+	char *p;
+	unsigned int i;
+
+	p = malloc(size * sizeof(char));
+
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+
+	i = 0;
+	while (i < size)
+	{
+		p[i] = c;
+		i++;
+	}
+	return (p);
+}
