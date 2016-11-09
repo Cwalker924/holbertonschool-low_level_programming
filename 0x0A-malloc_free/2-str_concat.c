@@ -65,7 +65,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	c = malloc(sizeof(*s1) + sizeof(*s2));
+	c = malloc(str_len(s1) + str_len(s2) + 1);
 
 	n = 0;
 	while (s1[n] != '\0')
@@ -79,7 +79,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		i++;
 	}
-	s2[i] = '\0';
 	_strncat(c, s2, i);
 	return (c);
 }
