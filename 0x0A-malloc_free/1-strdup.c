@@ -19,6 +19,26 @@ int str_len(char *str)
 }
 
 /**
+ * _strcpy - redirects memory
+ * @dest: destination
+ * @src: source
+ * Return: new destination
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = src[i];
+	return (dest);
+}
+
+/**
  * _strdup - returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a
  * parameter.
@@ -29,22 +49,18 @@ int str_len(char *str)
 char *_strdup(char *str)
 {
 	char *c;
-	int size;
-	int i;
 
-	size = str_len(str);
-	c = malloc((size + 1) * sizeof(char));
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	c = malloc(str_len(str) + 1);
 
 	if (c == NULL)
 	{
 		return (NULL);
 	}
-
-	i = 0;
-	while (i < size)
-	{
-		c[i] = str[i];
-		i++;
-	}
+	_strcpy(c, str);
 	return (c);
 }
