@@ -29,12 +29,16 @@ char *str_concat(char *s1, char *s2)
 	char *c;
 	int i;
 
-	c = malloc(sizeof(*s1) + sizeof(*s2));
-
-	if (c == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
 	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	c = malloc(sizeof(*s1) + sizeof(*s2));
 
 	i = 0;
 	while (*s1 != '\0')
