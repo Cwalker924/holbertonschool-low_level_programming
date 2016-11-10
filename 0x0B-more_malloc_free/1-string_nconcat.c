@@ -83,11 +83,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	p = str_len(s2) + 1;
 	if (p <= n)
 	{
-		while (s2[i] != '\0')
-		{
-			i++;
-		}
-		s2[i] = '\0';
 		_strncat(c, s2, i);
 	}
 	else
