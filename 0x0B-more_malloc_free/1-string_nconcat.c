@@ -55,7 +55,7 @@ char *_strncat(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *c;
-	int d;
+	int d, i;
 	unsigned int p;
 
 	if (s1 == NULL)
@@ -80,10 +80,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	_strncat(c, s1, d);
 
-	p = str_len(s2);
+	p = str_len(s2) + 1;
 	if (p <= n)
 	{
-		_strncat(c, s2, d);
+		while (s2[i] != '\0')
+		{
+			i++;
+		}
+		_strncat(c, s2, i);
 	}
 	else
 	{
