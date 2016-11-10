@@ -14,19 +14,25 @@ char *argstostr(int ac, char **av)
 	int i, j, size, strcount;
 
 	if (ac == 0 || av == NULL)
+	{
 		return (NULL);
+	}
 
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; *(*(av + i) + j) != '\0'; j++)
+		{
 			size++;
+		}
 		size++;
 	}
 
 	a = malloc((size + 1) * sizeof(char));
 
 	if (a == NULL)
+	{
 		return (NULL);
+	}
 
 	strcount = 0;
 	retp = a;
