@@ -46,9 +46,10 @@ char *_strncat(char *dest, char *src, int n)
 }
 
 /**
- * str_concat - concatenates two strings
+ * string_nconcat - concatenates two strings
  * @s1: string 1
  * @s2: string 2
+ * @n: byte to go upto on s2
  * Return: s1 and s2 concatenated otherwise NULL
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
