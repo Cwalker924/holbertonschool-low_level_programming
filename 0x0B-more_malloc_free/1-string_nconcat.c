@@ -87,6 +87,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			i++;
 		}
+		s2[i] = '\0';
 		_strncat(c, s2, i);
 	}
 	else
