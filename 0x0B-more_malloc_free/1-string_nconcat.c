@@ -80,7 +80,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	_strncat(c, s1, d);
 
-	p = str_len(s2) + 1;
+	p = str_len(s2);
 	if (p <= n)
 	{
 		_strncat(c, s2, d);
