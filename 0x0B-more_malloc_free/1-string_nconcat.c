@@ -15,7 +15,6 @@ int str_len(char *str)
 	{
 		i++;
 	}
-	i++;
 	return (i);
 }
 
@@ -84,7 +83,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	p = str_len(s2) + 1;
 	if (p <= n)
 	{
-		_strncat(c, s2, d);
+		_strncat(c, s2, p);
 	}
 	else
 	{
