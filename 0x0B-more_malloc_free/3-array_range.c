@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
- *
+ * array_range - creates an array of integers
+ * @min: minimum range
+ * @max: maximum range
+ * Return: return array
  */
 int *array_range(int min, int max)
 {
@@ -28,5 +28,5 @@ int *array_range(int min, int max)
 	{
 		c[n] = min;
 	}
-	return(c);
+	return (c);
 }
