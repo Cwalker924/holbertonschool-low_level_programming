@@ -14,7 +14,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op-sub - subtracts 2 numbers
+ * op_sub - subtracts 2 numbers
  * @a: num 1
  * @b: num 2
  * Return: sub num of a & b

@@ -3,10 +3,9 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
- *
+ * get_op_func - uses op_t struct
+ * @s: argument +, _, *, /, %.
+ * Return: int
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -28,6 +27,7 @@ int (*get_op_func(char *s))(int, int)
 			return (ops[i].f);
 			i++;
 		}
+		i++;
 	}
 	return (NULL);
 }
