@@ -8,18 +8,17 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i, num;
+	unsigned int i;
 	va_list lst;
 
 	va_start(lst, n);
 
 	for (i = 0; i < n; i++)
 	{
-		num = va_arg(lst, unsigned int);
-		if (i == n - 1)
-			printf("%d\n", num);
-		else
-			printf("%d%s", num, separator);
+		printf("%d", va_arg(lst, unsigned int));
+		if (i != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
+	printf("\n");
 	va_end(lst);
 }
