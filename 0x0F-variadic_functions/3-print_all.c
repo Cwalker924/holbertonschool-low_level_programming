@@ -65,14 +65,18 @@ void print_all(const char * const format, ...)
 	sep = "";
 	va_start(args, format);
 
-	while (format != NULL && format[i / 4] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
-		n = i % 4;
-		if (storage[n].type_is[0] == format[i / 4])
+		n = 0;
+		while (n < 4)
 		{
-			printf("%s", sep);
-			storage[n].f(args);
-			sep = ", ";
+			if (*storage[n].type_is == format[i])
+			{
+				printf("%s", sep);
+				storage[n].f(args, sep);
+				sep = ", ";
+			}
+			n++;
 		}
 		i++;
 	}
