@@ -50,7 +50,7 @@ void character_(va_list lst)
 void print_all(const char * const format, ...)
 {
 	unsigned int i, n;
-	va_list args;
+	va_list lst;
 	char *sep;
 
 	checker storage[] = {
@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 
 	i = 0;
 	sep = "";
-	va_start(args, format);
+	va_start(lst, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 			if (*storage[n].type_is == format[i])
 			{
 				printf("%s", sep);
-				storage[n].f(args, sep);
+				storage[n].f(lst, sep);
 				sep = ", ";
 			}
 			n++;
@@ -81,5 +81,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_end(args);
+	va_end(lst);
 }
