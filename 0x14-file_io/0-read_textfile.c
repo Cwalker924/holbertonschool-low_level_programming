@@ -1,31 +1,38 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
- *
+ * _print - prints string
+ * @str: string to print
+ * @max: letters to print
+ * Return: number of characters
  */
-
-int _print(char *str, unsigned int max)
+int _print(char *str, size_t max)
 {
 	int i;
 
+	i = 0;
 	while (str[i] != '\0' && max > 0)
 	{
 		_putchar(str[i]);
 		i++;
+		max--;
 	}
 	return (i);
 }
 
-/**/
+/**
+ * read_textfile - a function that reads a text file and
+ * print it to the POSIX standard output.
+ * @filename: name of file to be read
+ * @letters: the number of letters to read in
+ * Return: numbers printed
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char buf[1024];
-	int p;
-	
+	ssize_t p;
+
 	if (!filename)
 		return (0);
 
