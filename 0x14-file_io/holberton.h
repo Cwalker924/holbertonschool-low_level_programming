@@ -9,6 +9,7 @@
 #include <unistd.h>
 
 int _putchar(char c);
+int _strlen(char *c);
 int _print(char *str, size_t max);
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
