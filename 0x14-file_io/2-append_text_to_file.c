@@ -18,9 +18,9 @@ int _strlen(char *c)
 /**
  * append_text_to_file - a function that appends a text at
  * the end of a file.
- * @filename:
- * @text_content:
- * Return:
+ * @filename: name of file passed in, if NULL return -1
+ * @text_content: text in file. creats file if NULL
+ * Return: 1 if usccessful, otherwise -1
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
