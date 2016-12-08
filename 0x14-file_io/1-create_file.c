@@ -1,21 +1,6 @@
 #include "holberton.h"
 
 /**
- * _strlen - counts string length
- * @c: string passed
- * Return: number of characters
- */
-int _strlen(char *c)
-{
-	int i;
-
-	i = 0;
-	while (c[i] != '\0')
-		i++;
-	return (i);
-}
-
-/**
  * create_file - function that creats a file
  * @filename: name of file passed in, if NULL return -1
  * @text_content: text in file. creats file if NULL
@@ -23,39 +8,32 @@ int _strlen(char *c)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, fd_write, length;
-	char *buf;
+	int fd, i, text_status;
 
-	length = _strlen(text_content);
-	buf = malloc(sizeof(length));
-
-	/* checks if buf is NULL*/
-	if (!buf)
-		return (-1);
 	/* checks if file is NULL */
 	if (!filename)
 		return (-1);
 
-	/*creats and opens file with read/write permission*/
-	fd = open(filename, O_CREAT | O_RDWR, 0600);
+	/*creats and opens file with write permission*/
+	fd = open(filename, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
 	/* if file as an error */
 	if (fd == -1)
 		return (-1);
 
 	/*if content is NULL close file */
-	if (text_content == NULL)
+	if (text_content)
 	{
-		close(fd);
-		return (1);
+		i = 0;
+		while (text_content[i] != '\0')
+		{
+			i++;
+		}
+		text_status = write(fd, text_content, i);
+		if (text_status == -1)
+			return (-1);
 	}
-	/* write text_content to fd*/
-	fd_write = write(fd, text_content, length);
-	if (fd_write == -1)
-	{
-		close(fd);
-		return (-1);
-	}
+
 	close(fd);
-	free(buf);
+
 	return (1);
 }
