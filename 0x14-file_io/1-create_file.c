@@ -14,7 +14,8 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	/*creats and opens file with write permission*/
+	/*creats and opens file for write only and
+	  read/write permission, owner permission*/
 	fd = open(filename, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
 	/* if file as an error */
 	if (fd == -1)
@@ -32,7 +33,7 @@ int create_file(const char *filename, char *text_content)
 		if (text_status == -1)
 			return (-1);
 	}
-
+	
 	close(fd);
 
 	return (1);
