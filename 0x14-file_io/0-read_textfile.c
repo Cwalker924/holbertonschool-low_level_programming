@@ -1,10 +1,31 @@
 #include "holberton.h"
 
+/**
+ *
+ *
+ *
+ *
+ */
+
+int _print(char *str, unsigned int max)
+{
+	int i;
+
+	while (str[i] != '\0' && max > 0)
+	{
+		_putchar(str[i]);
+		i++;
+	}
+	return (i);
+}
+
+/**/
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char buf[1024];
-
+	int p;
+	
 	if (!filename)
 		return (0);
 
@@ -19,5 +40,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	close(fd);
 
-	return (0);
+	p = _print(buf, letters);
+	return (p);
 }
