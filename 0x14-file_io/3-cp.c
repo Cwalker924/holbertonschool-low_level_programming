@@ -62,16 +62,12 @@ int main(int argc, char **argv)
 	/* read file descriptor */
 	fd_read = open(argv[1], O_RDONLY);
 	if (fd_read == -1)
-	{
 		error_98(argv[1]);
-	}
 
 	/* write file descriptor */
-	fd_write = open(argv[2], O_RDWR, mode);
+	fd_write = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
 	if (fd_write == -1)
-	{
 		error_99(argv[2]);
-	}
 
 	size = 1;
 	err = 1;
