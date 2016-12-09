@@ -1,6 +1,7 @@
 #ifndef FILE_IO
 #define FILE_IO
 
+#define BUF_SIZE 1204
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
