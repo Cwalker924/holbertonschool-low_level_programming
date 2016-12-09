@@ -1,65 +1,65 @@
-/**                                                            
- * _strlen - counts string length                              
- * @c: string passed                                           
- * Return: number of characters                                
- */
-int _strlen(char *c)
-{
-	int i;
-
-	i = 0;
-	while (c[i] != '\0')
-		i++;
-	return (i);
-}
+#include "holberton.h"
 
 /**
- * append_text_to_file - a function that appends a text at
- * the end of a file.
- * @filename: name of file passed in, if NULL return -1
- * @text_content: text in file. creats file if NULL
- * Return: 1 if usccessful, otherwise -1
+ * main - point of entry/ copies text from one file to another file
+ * @ac: number of args entered
+ * @av: actual args being passed
+ * Return: 0 upon success, otherwise return -1
  */
-int append_text_to_file(const char *filename, char *text_content)
+int main(int ac, char *av[])
 {
-	int fd, fd_write, length;
-	char *buf;
+	char buf[1024];
+	int fd_read, fd_write, err, size;
+	mode_t mode;
 
-	length = _strlen(text_content);
-	buf = malloc(sizeof(length));
-
-	/* checks if buf is NULL*/
-	if (!buf)
-		return (-1);
-	/* checks if file is NULL */
-	if (!filename)
-		return (-1);
-	/*creats and opens file with read/write permission*/
-	fd = open(filename, O_APPEND | O_RDWR);
-	/* if file as an error */
-	if (fd == -1)
-		return (-1);
-	/*if content is NULL close file */
-	if (!text_content)
+	mode = S_IWUSR | S_IRUSR | S_IROTH | S_IRGRP | S_IWGRP;
+	/* check input for NULL */
+	if (!av[1])
 	{
-		close(fd);
-		return (1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(97);
 	}
-	/* write text_content to fd*/
-	fd_write = write(fd, text_content, length);
+	if (!av[2])
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
+	if (!ac)
+	{
+		dprint(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	/* read file disriptor */
+	fd_read = open(av[1], O_RDONLY);
+	/* if read file can not be opened exit 98*/
+	if (fd_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		return (exit(98));
+	}
+
+	/*write file descriptor*/
+	fd_write = open(av[2], O_RDWR, mode);
 	if (fd_write == -1)
 	{
-		close(fd);
-		return (-1);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		return (exit(99));
 	}
-	close(fd);
-	free(buf);
-	return (1);
-}
 
-/**
- *
- *
- *
- */
-int main(int argc, char *argv[]){}
+	size = 1;
+	err = 1;
+	while (size)
+	{
+		size = read(fd_read, buf, 1024);
+		if (size > 0)
+		{
+			err = write(fd_write, buf, size);
+			if (err == -1)
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
+	}
+	close(fd_read);
+	close(fd_write);
+	return (0);
+}
