@@ -1,9 +1,7 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * error_97 - wrong usage error
  */
 void error_97(void)
 {
@@ -12,9 +10,8 @@ void error_97(void)
 }
 
 /**
- *
- *
- *
+ * error_98 - read fail error
+ * @str: read file
  */
 void error_98(char *str)
 {
@@ -23,8 +20,8 @@ void error_98(char *str)
 }
 
 /**
- *
- *
+ * error_99 - write fail error
+ * @str: write file
  */
 void error_99(char *str)
 {
@@ -33,8 +30,8 @@ void error_99(char *str)
 }
 
 /**
- *
- *
+ * error_100 - close fail error
+ * @fd: file descriptor
  */
 void error_100(int fd)
 {
