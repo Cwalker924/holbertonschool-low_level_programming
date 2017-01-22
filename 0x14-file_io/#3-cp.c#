@@ -1,0 +1,65 @@
+#include "holberton.h"
+
+/**
+ * main - main point of entry/ copy contents from one file to another
+ * @ac: number of args past
+ * @av
+ * Return: 0 upon success, otherwise return -1
+ */
+int main(int ac, char *av[]) 
+{
+	char buf[1024];
+	int fd_read, fd_write, err, size;
+	mode_t mode;
+
+	mode = S_IWUSR | S_IRUSR | S_IROTH | S_IRGRP | S_IWGRP;
+	/* check input for NULL */
+	if (!av[1])
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(97);
+	}
+	if (!av[2])
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
+	if (!ac)
+	{
+		dprint(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	/* read file disriptor */
+	fd_read = open(av[1], O_RDONLY);
+	/* if read file can not be opened exit 98*/
+	if (fd_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		return exit(98);
+	}
+
+	/*write file descriptor*/
+	fd_write = open(av[2], O_RDWR, mode);
+	if (fd_write == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		return exit(99);
+	}
+
+	size = 1;
+	err = 1;
+	while (size)
+	{
+		size = read(fd_read, buf, 1024);
+		if (size > 0)
+		{
+			err = write (fd_write, buf, size);
+			if (err == -1)
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
+	}
+	close(fd_read);
+	close(fd_write);
+	return (0);
+}
