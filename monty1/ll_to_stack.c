@@ -1,9 +1,10 @@
 #include "monty.h"
 
 /**
- *
- *
- *
+ * add_node - add node at the top of LinkList
+ * @stack: double pointer to stack
+ * @n: data passed
+ * Return: 0 upon success otherise 1
  */
 int add_node(stack_t **stack, int n)
 {
@@ -26,9 +27,8 @@ int add_node(stack_t **stack, int n)
 }
 
 /**
- *
- *
- *
+ * del_stack - delets complete stack
+ * @stack: double pointer to stack
  */
 void del_stack(stack_t **stack)
 {
@@ -44,9 +44,9 @@ void del_stack(stack_t **stack)
 }
 
 /**
- *
- *
- *
+ * del_top_node - deletes top node from stack
+ * @stack: double pointer to stack
+ * Return: 0 upon success, otherwise 1
  */
 int del_top_node(stack_t **stack)
 {
@@ -71,9 +71,9 @@ int del_top_node(stack_t **stack)
 }
 
 /**
- *
- *
- *
+ * print_stack - prints all elements in stack
+ * @stack: double pointer to stack
+ * Return: 0 upon success otherwise 1
  */
 int print_stack(stack_t **stack)
 {

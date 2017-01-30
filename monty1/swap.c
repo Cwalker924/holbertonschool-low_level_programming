@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- *
- *
- *
+ * swap - swaps two elements of a stack
+ * @stack: double pointer to stack
+ * @line_number: current error line
  */
 void swap(stack_t **stack, unsigned int line_number)
 {

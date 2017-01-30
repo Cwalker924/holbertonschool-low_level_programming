@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- *
- *
- *
+ * _add - adds stack data
+ * @stack: double pointer to stack
+ * @line_number: current error line
  */
 void _add(stack_t **stack, unsigned int line_number)
 {

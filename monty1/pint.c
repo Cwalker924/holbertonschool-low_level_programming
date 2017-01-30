@@ -1,10 +1,9 @@
 #include "monty.h"
 
 /**
- *
- *
- *
- *
+ * pint - prints top nodes element
+ * @stack: double pointer to stack
+ * @line_number: current error line
  */
 void pint(stack_t **stack, unsigned int line_number)
 {

@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- *
- *
- *
- *
- *
+ * get_op_func - gets correlating function
+ * @s: value passed to match
+ * @stack: double pointer to stack
+ * @line_number: current error line
  */
 void (*get_op_func(char *s))(stack_t **stack, unsigned int line_number)
 {
