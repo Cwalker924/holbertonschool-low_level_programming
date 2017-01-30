@@ -2,9 +2,10 @@
 
 int data = 0;
 /**
- *
- *
- *
+ * main - entry point for stack program
+ * @argc: number of arguements passed
+ * @argv: arguement vectors
+ * Return: 0 upon success
  */
 int main(int argc, char **argv)
 {
