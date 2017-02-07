@@ -7,12 +7,16 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	while (*list != NULL)
+	while ((*list)->next != NULL)
 	{
+		printf("**%d\n", (*list)->n);
 		while (((*list)->prev != NULL) &&
-		       (((*list)->next->n) < ((*list)->prev->n)))
+		       (((*list)->n) < ((*list)->prev->n)))
 		{
-			*list = (*list)->prev;
+			/*swap current node with prev node*/
+			printf("1 in the loop = %d\n", (*list)->n);
+			/*print_list(*list);*/
+
 		}
 		*list = (*list)->next;
 	}
