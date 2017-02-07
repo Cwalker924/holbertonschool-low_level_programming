@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get - retrieces a value associated with key
+ * hash_table_get - retrieves a value associated with key
  * @ht: hash table being searched
  * @key: key being searched
  * Return: the value associted with key or NULL if key doesnt exist
@@ -24,6 +24,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 				temp = temp->next;
 			}
 		}
+	}
+	else
+	{
+		return (NULL);
 	}
 	return (NULL);
 }
