@@ -22,7 +22,7 @@ void quick_swap(int *array, int first, int second, size_t size)
  * @array: array of integers to sort
  * @size: size of @array
  *
- * Return: pivot in center position
+ * Return: pivot in center position or 1 upon failure
  */
 int set_pivot(int *array, int start, int stop, size_t size)
 {
@@ -31,7 +31,7 @@ int set_pivot(int *array, int start, int stop, size_t size)
 	pivot = array[start];
 	up = start - 1;
 	down = stop;
-	while (true)
+	while (1)
 	{
 		while (array[up] < pivot)
 			up++;
@@ -42,6 +42,7 @@ int set_pivot(int *array, int start, int stop, size_t size)
 		else
 			return (down + 1);
 	}
+	return (1);
 }
 
 /**
