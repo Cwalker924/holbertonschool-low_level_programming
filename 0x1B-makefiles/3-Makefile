@@ -15,8 +15,10 @@ holberton: $(SRC)
 
 clean:
 	$(RM) *~
+
 oclean:
 	$(RM) $(OBJ)
+
 fclean:
 	$(RM) *~ $(NAME) $(OBJ)
 
