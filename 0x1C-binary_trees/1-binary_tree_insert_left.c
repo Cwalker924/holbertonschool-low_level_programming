@@ -10,47 +10,25 @@
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
-	binary_tree_t *new_node;
+	binary_tree_t *new_node, *temp;
 
 	new_node = malloc(sizeof(binary_tree_t));
 	if (new_node == NULL)
 		return (NULL);
 	new_node->n = value;
-	new_node->parent = NULL;
+	new_node->parent = parent;
 	new_node->left = NULL;
 	new_node->right = NULL;
 
-	if (new_node->n < parent->n)
-	{
-		while (parent->left != NULL)
-		{
-			if (parent->left->n < new_node->n)
-			{
-				new_node->parent = parent;
-				parent->left->parent = new_node;
-			}
-			else
-				new_node->parent = parent->left;
-			parent = parent->left;
-		}
-		new_node->parent = parent;
-		return (new_node);
-	}
+	temp = parent->left;
+	parent->left = new_node;
+	if (temp == NULL)
+		new_node->left = NULL;
 	else
 	{
-		while (parent->right != NULL)
-		{
-			if (parent->right->n < new_node->n)
-			{
-				new_node->parent = parent;
-				parent->right->parent = new_node;
-			}
-			else
-				new_node->parent = parent->right;
-			parent = parent->right;
-		}
-		new_node->parent = parent;
-		return (new_node);
+		new_node->left = temp;
+		temp->parent = new_node;
 	}
-	return (NULL);
+
+	return (new_node);
 }
