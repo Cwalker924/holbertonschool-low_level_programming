@@ -38,25 +38,19 @@ int binary_search(int *array, size_t size, int value)
 	end = size - 1;
 	while (start <= end)
 	{
-		print_array(array, start, end);
-		mid = (start + end) / 2;
+		print_array(parray, start, end);
+		mid = start + (end - start) / 2;
 		if (parray[mid] == value)
 		{
 			return (mid);
 		}
 		else if (parray[mid] > value)
 		{
-			if (end % 2 != 1)
-				end = mid;
-			else
-				end = mid - 1;
+			end = mid;
 		}
 		else
 		{
-			if (end % 2 != 1)
-				start = mid;
-			else
-				start = mid + 1;
+			start = mid + 1;
 		}
 	}
 	return (-1);
