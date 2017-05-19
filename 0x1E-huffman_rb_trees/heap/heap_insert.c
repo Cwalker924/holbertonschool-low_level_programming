@@ -1,14 +1,11 @@
 #include "heap.h"
-/**
- * Code Credit:
- * GitHub-@jayjay823
- */
 
 /**
  * find_parent - gets parent node
  * @root: binary tree root
  * @height: tree height
  * Return: parent node
+ * Code Credit (GitHub - @jayjay823)
  */
 binary_tree_node_t *find_parent(binary_tree_node_t *root, int *height)
 {
@@ -39,6 +36,7 @@ binary_tree_node_t *find_parent(binary_tree_node_t *root, int *height)
  * @new_node: newly added node
  * @parent: parent node
  * Return: 0 upon success
+ * Code Credit (GitHub - @jayjay823)
  */
 int swap_nodes(binary_tree_node_t *new_node, binary_tree_node_t *parent)
 {
@@ -55,6 +53,7 @@ int swap_nodes(binary_tree_node_t *new_node, binary_tree_node_t *parent)
  * @heap: pointer to heap
  * @data: data to insert into node
  * Return: newly created node
+ * Code Credit (GitHub - @jayjay823)
  */
 binary_tree_node_t *heap_insert(heap_t *heap, void *data)
 {

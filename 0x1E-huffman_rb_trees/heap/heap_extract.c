@@ -1,14 +1,10 @@
 #include "heap.h"
 
 /**
- * Code Credit:
- * GitHub-@jayjay823
- */
-
-/**
  * heap_extract - gets single node from heap
  * @heap: target heap
  * Return: data from node
+ * Code Credit (GitHub - @jayjay823)
  */
 void *heap_extract(heap_t *heap)
 {
@@ -47,6 +43,7 @@ void *heap_extract(heap_t *heap)
  * @root: root node of tree
  * @heap: heap pointer
  * Return: 0 for success, otherwise 1 upon failure
+ * Code Credit (GitHub - @jayjay823)
  */
 int root_node(binary_tree_node_t *root, heap_t *heap)
 {
